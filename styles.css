@@ -1,0 +1,200 @@
+/* Reset all margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ugly Background */
+body {
+    background-color: #FFFF00; /* bright yellow */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* using Comic Sans */
+    color: #FF00FF; /* bright purple text */
+    line-height: 1.5;
+}
+
+/* Header - Super large text and ridiculous colors */
+header {
+    background-color: #00FFFF; /* light cyan */
+    text-align: center;
+    padding: 80px;
+    color: #FF6347; /* tomato red */
+}
+
+header h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #FF6347;
+    text-shadow: 4px 4px 0 #FFD700; /* yellow shadow */
+}
+
+header p {
+    font-size: 2rem;
+    color: #32CD32; /* lime green */
+}
+
+/* Intro section */
+#intro {
+    background-color: #FF1493; /* deep pink */
+    padding: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    border: 10px solid #000000; /* black border */
+}
+
+#intro h2 {
+    font-size: 3rem;
+    color: #FFFF00; /* yellow */
+}
+
+#intro p {
+    font-size: 1.5rem;
+    color: #000000; /* black text */
+    text-transform: uppercase;
+}
+
+/* Features Section */
+#features {
+    background-color: #0000FF; /* blue */
+    padding: 50px;
+    margin: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 3.5rem;
+    color: #FFD700; /* gold */
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#features ul li {
+    font-size: 1.5rem;
+    color: #FF4500; /* orange red */
+    background-color: #FFFFFF; /* white background */
+    margin: 5px;
+    padding: 5px;
+    border: 3px dashed #FF00FF; /* pink dashed border */
+}
+
+/* Join Section */
+#join {
+    background-color: #8A2BE2; /* blue violet */
+    padding: 60px;
+    text-align: center;
+    border: 10px dotted #FFFF00; /* yellow dotted border */
+    color: #FFFFFF;
+}
+
+#join h2 {
+    font-size: 3.5rem;
+    color: #00FF00; /* neon green */
+    font-family: 'Arial Black', sans-serif;
+}
+
+#join p {
+    font-size: 2rem;
+    color: #FF6347; /* tomato red */
+}
+
+.join-button {
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #0000FF; /* blue */
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    margin-top: 20px;
+    border: 5px solid #FF00FF; /* pink border */
+    transition: all 0.3s ease-in-out;
+}
+
+.join-button:hover {
+    background-color: #FFFF00; /* yellow */
+    color: #FF00FF; /* pink */
+    text-decoration: underline;
+}
+
+/* Raid Section */
+#raid {
+    background-color: #FFD700; /* yellow */
+    padding: 50px;
+    text-align: center;
+    color: #FF6347; /* tomato red */
+    border: 10px solid #00FF00; /* neon green border */
+}
+
+#raid h2 {
+    font-size: 4rem;
+    color: #0000FF; /* bright blue */
+    text-shadow: 5px 5px 5px #FF1493; /* deep pink shadow */
+}
+
+#raid p {
+    font-size: 2rem;
+    color: #32CD32; /* lime green */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Dropdown for raid section */
+#raid select {
+    font-size: 1.5rem;
+    padding: 15px;
+    background-color: #FFFF00; /* yellow */
+    color: #FF1493; /* deep pink */
+    border: 5px solid #0000FF; /* blue border */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #FF6347; /* tomato red shadow */
+    margin-top: 30px;
+    outline: none;
+}
+
+#raid select:focus {
+    background-color: #FF6347; /* tomato red on focus */
+    color: #FFFF00; /* yellow text on focus */
+}
+
+/* Button for "Begin The Raid!" */
+.raid-button {
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #FF6347; /* tomato red */
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 5px solid #0000FF; /* blue border */
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.raid-button:hover {
+    background-color: #FF1493; /* deep pink */
+    color: #FFFF00; /* yellow */
+}
+
+/* Back Button for Raid Page */
+#back-to-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button {
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #FF6347; /* tomato red */
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 5px solid #00FF00; /* green border */
+    transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #FFFF00; /* yellow */
+    color: #FF6347; /* tomato red */
+}

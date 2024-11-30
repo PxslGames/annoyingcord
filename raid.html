@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raid The Server - AnnoyingCord</title>
+    <link rel="stylesheet" href="raid.css">
+</head>
+<body>
+    <header>
+        <h1>You've Started The Raid!</h1>
+        <p>Good luck, and may the chaos never end.</p>
+    </header>
+
+    <section id="raid-intro">
+        <h2>Welcome to the Raid Zone!</h2>
+        <p>Now that you're here, be ready for random spam, pinging, and absolute nonsense!</p>
+        <p>There's no going back.</p>
+    </section>
+
+    <section id="raid-actions">
+        <h2>Choose a Message to Send!</h2>
+
+        <!-- Dropdown Menu to Select a Message -->
+        <label for="raid-message">Pick a message:</label>
+        <select id="raid-message">
+            <option value="RAID TIME! @everyone Get ready for chaos!">RAID TIME! @everyone Get ready for chaos!</option>
+            <option value="ATTENTION EVERYONE! We're taking over!">ATTENTION EVERYONE! We're taking over!</option>
+            <option value="You can't escape the chaos! @everyone">You can't escape the chaos! @everyone</option>
+            <option value="Prepare for a disaster! @everyone">Prepare for a disaster! @everyone</option>
+            <option value="The server will never be the same again!">The server will never be the same again!</option>
+        </select>
+
+        <!-- Numeric Input to Specify How Many Messages to Send -->
+        <label for="message-count">How many messages (per webhook):</label>
+        <input type="number" id="message-count" value="5" min="1" max="100">
+
+        <!-- Button to Begin The Raid -->
+        <button id="begin-raid" onclick="beginRaid()">Begin The Raid!</button>
+    </section>
+
+    <section id="small-disclaimer">
+        <h2>Small Disclaimer!</h2>
+        <p>Messages sometimes aren't immediate, they may take a few seconds to send in discord!</p>
+        <p>We can be rate-limited, so you may get less messages than someone if they have just raided.</p>
+    </section>
+
+    <!-- Back Button -->
+    <section id="back-to-home">
+        <p><a href="index.html" class="back-button">Back To Home</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AnnoyingCord - All Rights Violated</p>
+    </footer>
+
+    <script>
+        async function beginRaid() {
+            const message = document.getElementById("raid-message").value;
+            const messageCount = parseInt(document.getElementById("message-count").value, 10);
+            console.log("Raid message selected:", message);
+            console.log("Messages per webhook:", messageCount);
+
+            // Mock webhooks for testing (Replace this with actual data fetching later)
+            const webhooks = [
+                "https://discord.com/api/webhooks/1312532718155731064/Gc5iYKhzpLHijqYrIS1O8Ohc5T644sGLYwujz7CvBD6IGQW_qRwCy2a91Qmh0qt2c4Ft",
+                "https://discord.com/api/webhooks/1312533274765033493/o8Hr3P6HoqRgYhhJepjPg86Y66FJ2YOjvSBDZ41VVHoeI5_5v1Q-uPr__YVAXfeynjZZ",
+                "https://discord.com/api/webhooks/1312541081518346354/l837tPuPSmmanX0g9F4mtSLG4-2jqzZBGO5kiizA0VxPKY0PbUphsWTi34bJULOtuCJb",
+                "https://discord.com/api/webhooks/1312542938932449360/JkZLKDSfvVp_MkJUDx_qfNy1tpqdTfuzgEglePAy3GIEYfR5xOzGlDtdCcosqbvyrbLO",
+                "https://discord.com/api/webhooks/1312543275223089182/UPYCjeeLunp4ix_73uX1JUAo2Fd1X_5IrmHOPohIvqmF2WttWK2vFitZrlMIYmRbkclq",
+                "https://discord.com/api/webhooks/1312543558250659912/-XJwGWoBf8LhNxH_srILC13-z6-y6vnsveJPITQL0xATRu6bg8e2jRZE5wPBDOP0pH7I"
+            ];
+
+            // Mock avatarBase64 (for testing purposes)
+            const avatarBase64 = "data:image/png;base64,..."  // Use a valid base64 string for your avatar here
+
+            // Start the raid by processing the webhooks
+            try {
+                console.log("Starting raid...");
+
+                // Loop through each webhook and send the message the specified number of times
+                const tasks = [];
+                for (let i = 0; i < webhooks.length; i++) {
+                    for (let j = 0; j < messageCount; j++) {
+                        tasks.push(processWebhook(webhooks[i], avatarBase64, message));
+                    }
+                }
+
+                // Wait for all the requests to complete
+                await Promise.all(tasks);
+                alert(`Raid completed! ${messageCount} messages sent to each webhook.`);
+            } catch (error) {
+                console.error("Error during the raid:", error);
+                alert("An error occurred. Check the console for details.");
+            }
+        }
+
+        // Simulated function to edit webhook (change name and avatar)
+        async function editWebhook(webhookUrl, avatarBase64) {
+            const data = {
+                name: "annoyingcord",  // Set the webhook name
+                avatar: avatarBase64   // Set the webhook avatar as base64-encoded string
+            };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    console.log(`Webhook updated: ${webhookUrl}`);
+                } else {
+                    console.error(`Failed to update webhook: ${webhookUrl}`);
+                }
+            } catch (error) {
+                console.error("Error updating webhook:", error);
+            }
+        }
+
+        // Simulated function to send a message to a webhook
+        async function sendWebhookMessage(webhookUrl, message) {
+            const payload = { content: message };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                if (response.ok) {
+                    console.log(`Message sent: ${webhookUrl}`);
+                } else {
+                    console.error(`Failed to send message: ${webhookUrl}`);
+                }
+            } catch (error) {
+                console.error("Error sending message:", error);
+            }
+        }
+
+        // Simulated function to process a webhook
+        async function processWebhook(webhookUrl, avatarBase64, message) {
+            await editWebhook(webhookUrl, avatarBase64);  // Edit webhook to change name and avatar
+            await sendWebhookMessage(webhookUrl, message);  // Send the selected message
+        }
+    </script>
+</body>
+</html>

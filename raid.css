@@ -1,0 +1,173 @@
+/* Reset all margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ugly Background */
+body {
+    background-color: #FFFF00; /* bright yellow */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* using Comic Sans */
+    color: #FF00FF; /* bright purple text */
+    line-height: 1.5;
+}
+
+/* Header - Super large text and ridiculous colors */
+header {
+    background-color: #00FFFF; /* light cyan */
+    text-align: center;
+    padding: 80px;
+    color: #FF6347; /* tomato red */
+}
+
+header h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #FF6347;
+    text-shadow: 4px 4px 0 #FFD700; /* yellow shadow */
+}
+
+header p {
+    font-size: 2rem;
+    color: #32CD32; /* lime green */
+}
+
+/* Raid Intro Section */
+#raid-intro {
+    background-color: #FF1493; /* deep pink */
+    padding: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    border: 10px solid #000000; /* black border */
+}
+
+#raid-intro h2 {
+    font-size: 3rem;
+    color: #FFFF00; /* yellow */
+}
+
+#raid-intro p {
+    font-size: 1.5rem;
+    color: #000000; /* black text */
+    text-transform: uppercase;
+}
+
+/* Raid Actions Section */
+#raid-actions {
+    background-color: #0000FF; /* blue */
+    padding: 50px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#raid-actions h2 {
+    font-size: 3.5rem;
+    color: #FFD700; /* gold */
+}
+
+/* Themed Select Dropdown */
+#raid-actions select {
+    font-size: 1.5rem;
+    padding: 15px;
+    background-color: #FFFF00; /* yellow */
+    color: #FF1493; /* deep pink */
+    border: 5px solid #0000FF; /* blue border */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #FF6347; /* tomato red shadow */
+    margin-top: 30px;
+    outline: none;
+}
+
+#raid-actions select:focus {
+    background-color: #FF6347; /* tomato red on focus */
+    color: #FFFF00; /* yellow text on focus */
+}
+
+/* Themed Numeric Input */
+#raid-actions input[type="number"] {
+    font-size: 1.5rem;
+    padding: 15px;
+    background-color: #FFFF00; /* yellow */
+    color: #FF1493; /* deep pink */
+    border: 5px solid #0000FF; /* blue border */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #FF6347; /* tomato red shadow */
+    margin-top: 30px;
+    width: 100px; /* Adjust width as needed */
+    outline: none;
+}
+
+#raid-actions input[type="number"]:focus {
+    background-color: #FF6347; /* tomato red on focus */
+    color: #FFFF00; /* yellow text on focus */
+}
+
+/* Button to Begin The Raid */
+#raid-actions button {
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #FF6347; /* tomato red */
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 5px solid #0000FF; /* blue border */
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+#raid-actions button:hover {
+    background-color: #FF1493; /* deep pink */
+    color: #FFFF00; /* yellow */
+}
+
+/* Raid Intro Section */
+#small-disclaimer {
+    background-color: #FF1493; /* deep pink */
+    padding: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    border: 10px solid #000000; /* black border */
+}
+
+#small-disclaimer h2 {
+    font-size: 3rem;
+    color: #FFFF00; /* yellow */
+}
+
+#small-disclaimer p {
+    font-size: 1.5rem;
+    color: #000000; /* black text */
+    text-transform: uppercase;
+}
+
+/* Back Button for Raid Page */
+#back-to-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#back-to-home .back-button {
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #FF6347; /* tomato red */
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 5px solid #00FF00; /* green border */
+    transition: all 0.3s ease-in-out;
+}
+
+#back-to-home .back-button:hover {
+    background-color: #FFFF00; /* yellow */
+    color: #FF6347; /* tomato red */
+}
+
+/* Footer Section */
+footer {
+    background-color: #32CD32; /* lime green */
+    padding: 20px;
+    text-align: center;
+    color: #FF00FF; /* bright purple text */
+    font-size: 1.5rem;
+}
