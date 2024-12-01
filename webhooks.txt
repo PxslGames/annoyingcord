@@ -1,3 +1,6 @@
+The website doesn't need this file, the webhooks are in the code, but, I thought I would show them to you anyway, hoping that someone will spam these webhooks (NOT WITH BAD STUFF)
+There is 2 webhooks per channel, and 3 channels.
+
 https://discord.com/api/webhooks/1312532718155731064/Gc5iYKhzpLHijqYrIS1O8Ohc5T644sGLYwujz7CvBD6IGQW_qRwCy2a91Qmh0qt2c4Ft
 https://discord.com/api/webhooks/1312533274765033493/o8Hr3P6HoqRgYhhJepjPg86Y66FJ2YOjvSBDZ41VVHoeI5_5v1Q-uPr__YVAXfeynjZZ
 https://discord.com/api/webhooks/1312541081518346354/l837tPuPSmmanX0g9F4mtSLG4-2jqzZBGO5kiizA0VxPKY0PbUphsWTi34bJULOtuCJb
